@@ -17,6 +17,7 @@ import {
   Star,
   ArrowRight
 } from "lucide-react";
+import PortfolioItem from "@/components/PortfolioItem";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
@@ -51,12 +52,42 @@ const Index = () => {
   ];
 
   const portfolioItems = [
-    { id: 1, title: "Corporate Branding", category: "Branding" },
-    { id: 2, title: "E-commerce Website", category: "Web Design" },
-    { id: 3, title: "Mobile App UI", category: "UI/UX" },
-    { id: 4, title: "Marketing Campaign", category: "Print" },
-    { id: 5, title: "Restaurant Branding", category: "Branding" },
-    { id: 6, title: "Dashboard Design", category: "UI/UX" }
+    { 
+      id: 1, 
+      title: "Corporate Branding", 
+      category: "Branding",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 2, 
+      title: "E-commerce Website", 
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 3, 
+      title: "Mobile App UI", 
+      category: "UI/UX",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 4, 
+      title: "Marketing Campaign", 
+      category: "Print",
+      image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 5, 
+      title: "Restaurant Branding", 
+      category: "Branding",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 6, 
+      title: "Dashboard Design", 
+      category: "UI/UX",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    }
   ];
 
   const testimonials = [
@@ -210,20 +241,13 @@ const Index = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item) => (
-              <div key={item.id} className="group relative overflow-hidden rounded-xl">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                  <div className="text-white">
-                    <span className="text-sm text-indigo-300">{item.category}</span>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-indigo-600/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button variant="secondary" className="flex items-center gap-2">
-                    View Project <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
+              <PortfolioItem 
+                key={item.id} 
+                id={item.id} 
+                title={item.title} 
+                category={item.category} 
+                image={item.image} 
+              />
             ))}
           </div>
           
