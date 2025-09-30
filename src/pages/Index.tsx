@@ -302,11 +302,17 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1551836022-25b955e4090f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                alt="Design Studio Team" 
-                className="rounded-xl shadow-lg w-full h-auto object-cover"
-              />
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1551836022-25b955e4090f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                  alt="Design Studio Team" 
+                  className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    e.currentTarget.src = "https://placehold.co/600x400/6366f1/white?text=Design+Studio+Team";
+                  }}
+                />
+              </div>
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Our Studio</h2>
