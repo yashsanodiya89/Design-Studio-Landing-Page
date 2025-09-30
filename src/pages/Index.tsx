@@ -302,7 +302,11 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96" />
+              <img 
+                src="https://images.unsplash.com/photo-1551836022-25b955e4090f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                alt="Design Studio Team" 
+                className="rounded-xl shadow-lg w-full h-auto object-cover"
+              />
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Our Studio</h2>
