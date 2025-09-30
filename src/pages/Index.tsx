@@ -18,7 +18,6 @@ import {
   ArrowRight
 } from "lucide-react";
 import PortfolioItem from "@/components/PortfolioItem";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -520,11 +519,10 @@ const Index = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} DesignStudio. All rights reserved.</p>
+            <p className="mt-2">Made with ❤️ by Yash Sanodiya</p>
           </div>
         </div>
       </footer>
-      
-      <MadeWithDyad />
     </div>
   );
 };
